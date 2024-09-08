@@ -1,0 +1,26 @@
+GET http://localhost:3000/users HTTP/1.1
+###
+
+GET http://localhost:3000/users/a252e4e8-fa0d-4eb5-b93e-7388672a414b HTTP/1.1
+###
+
+POST http://localhost:3000/users HTTP/1.1
+content-Type: application/json
+
+{
+    "name": "Fernando Freires",
+    "email": "fernando@gmail.com"
+}
+###
+
+POST http://localhost:3000/todos HTTP/1.1
+content-Type: application/json
+x-user-id: 86ea76ae-030b-45d7-b215-2ab38431991d
+
+{
+    "title": "Minha   tarefa"
+}
+###
+
+POST http://localhost:3000/checkout HTTP/1.1
+x-user-id: 86ea76ae-030b-45d7-b215-2ab38431991d
